@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chemical Equations
+% LaTeX Template
+% Version 1.0 (14/10/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Martin Hensel (from the mhchem package documentation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note: to use these chemistry equations in your own document you will
+% need to copy the \usepackage[version=3]{mhchem} line and paste it 
+% before \begin{document} in your document. After this you can use the
+% chemistry equation notation as exemplified in this document anywhere
+% in your document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+\usepackage{physics}
+
+\begin{document}
+\everymath{\displaystyle}
+
+%									2a
+\paragraph{2a)} ~\\
+
+% first column
+\begin{minipage}[t]{0.6\textwidth}
+
+$V=-mgl \cos (\theta)$\\
+\\
+$T=\frac{1}{2}mv^{2}=\frac{1}{2}ml^2 \dot \theta^2$\\
+\\
+\boxed{L=\frac{1}{2}ml^2 \dot \theta^2+mgl \cos (\theta)}\\
+\\
+$
+\Rightarrow \frac{d}{dt} (ml^2 \dot \theta)=-mgl \sin (\theta)\\
+\\
+\Leftrightarrow \ddot \theta=-\frac{g}{l}\sin(\theta)$\\
+\\
+Para pequenos ângulos $\sin(\theta)\approx\theta\\
+\\
+\Rightarrow \ddot \theta=-\frac{g}{l}\theta \\
+\\
+\Leftrightarrow \theta=\sin(-\sqrt{\frac{g}{l}}t) \qquad \theta(t)=\sin(-\omega t)
+$
+\end{minipage}
+%second column
+\begin{minipage}[t]{0.5\textwidth}
+$v_k=\frac{\partial r_k}{\partial q_j}\dot q_j + \cancel{\frac{\partial r_k}{\partial t}}$\\
+\\
+$r(q,t)=(l\sin(\theta),l\cos(\theta))$\\
+\\
+$v=(l\dot \theta \cos(\theta), -l \dot \theta \sin(\theta)$
+
+$v^2=l^2 \dot \theta^2 \cancelto{1}{(\cos^2(\theta)+\sin^2(\theta))}$\\
+\\
+\\
+\\ \\ \\ \\ \\
+\boxed{\omega=\sqrt{\frac{g}{l}}}
+\end{minipage}
+\\
+\\
+\hrule
+%%%%%%%%%%%%%%%%%%%%                     2bi
+\paragraph{2bi)} ~\\
+\\
+2 graus de liberdade: $\theta$ e x\\
+\\
+$
+r_m=(x+l\sin(\theta),-l\cos(\theta)) \quad v_m=(\dot x+l\dot \theta \cos(\theta),l\dot \theta \sin(\theta)) \\
+\\
+v^2_m=(\dot x+l\dot \theta \cos(\theta))^2+(l\dot \theta \sin(\theta))^2=\dot x^2+2+\dot x+\dot \theta \cos(\theta)+l^2 \dot \theta^2 \cancelto{1}{(\cos^2(\theta)+\sin^2(\theta))}\\
+\\
+r_M=(x,cte) \quad v_M=\frac{\partial r_k}{\partial q_j} \dot q_j = (\dot x, 0) \qquad v^2_M=\dot x^2$ \\
+\\
+
+\boxed{L=\frac{M \dot x^2}{2}+\frac{m \dot x^2}{2}+m \dot xl \dot \theta \cos\theta+\frac{ml^2 \dot \theta^2}{2}+mgl\cos\theta}\\
+\\
+\hrule
+%									2bii
+\paragraph{2bii)} ~\\
+\\
+$
+\dv{t} (\pdv{L}{\dot x})=$\boxed{M \ddot x + m \ddot x +ml\ddot \theta \cos \theta - ml\dot \theta^2 \sin \theta} $= \pdv{L}{x}=0 \\
+\\
+\dv{t} (\pdv{L}{\dot \theta})=\dv{t} (m\dot x l \cos \theta + ml^2 \dot \theta)=m\ddot xl\cos\theta-m\dot x l \dot \theta \sin \theta+ml^2 \ddot \theta\\
+\\
+\pdv{L}{\theta}=-m\dot xl\dot \theta \sin \theta - mgl\sin \theta\\
+\\
+\Rightarrow \ddot x\cos\theta\cancel{-\dot x \dot \theta \sin\theta}+l\ddot \theta=\cancel{-\dot x \dot \theta\sin\theta}-g\sin\theta \Leftrightarrow \ddot x\cos\theta+l\ddot\theta=-g\sin\theta\\
+r_{CM}=\frac{mr_m+Mr_m}{m+M}=\frac{(mx+ml\sin\theta,-ml\cos\theta)+(Mx,-MH)}{m+M}\\
+\\
+\dv[2]{r_{CM}}{t}=\frac{(\boxed{M \ddot x + m \ddot x +ml\ddot \theta \cos \theta - ml\dot \theta^2 \sin \theta},ml\ddot\theta\sin\theta+ml\dot\theta^2\cos\theta)}{m+M}\\
+\\
+\dv[2]{r_{CM}}{t}=(0,\frac{ml\ddot\theta\sin\theta+ml\dot\theta^2\cos\theta}{m+M})
+$
+\\
+\hrule
+%									3a
+\paragraph{3a)} ~\\
+\\
+\begin{minipage}[t]{0.3\textwidth}
+$
+x_1=17t\\
+x_2=14-3t\\
+$
+\end{minipage}
+%second column
+\begin{minipage}[t]{0.3\textwidth}
+$
+\dot x_1=17\\
+\dot x_2=3\\
+$
+\end{minipage}
+\\
+$
+x_{CM}(t)=\frac{2\times 17t+5\times (3t+14)}{2+5}=7t+10 \qquad \dot x_{CM}=7 m/s\\
+$
+\\
+\hrule
+%									3b
+\paragraph{3b)} ~\\
+\\
+No ponto de compressão máxima $v_1=v_2=v_{CM}=7m/s\\
+\\
+\begin{minipage}[t]{0.6\textwidth}
+$
+T_i=\frac{1}{2}(2 \times 17^2+5 \times 3^2)=\frac{623}{2}\\
+\\
+T_{comp.max}=\frac{1}{2}(2+5)\times7^2=\frac{343}{2}\\
+$
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+$
+T_i+\cancel{V_i}=T+V\\
+$
+\end{minipage}
+$
+\\
+$
+V=\frac{kx^2}{2}=T_i-T_{comp.max}\\
+\\
+\Leftrightarrow \frac{623}{2}-\frac{343}{2}=\frac{kx^2}{2} \Leftrightarrow x_{max}=\sqrt{\frac{280}{4480}}=0.25m\\
+$
+\\
+\hrule
+%									3c
+\paragraph{3c)} ~\\
+\\
+Trata-se duma colisão elástica e portanto $\Delta p =0$ e $\Delta E_c=0$:\\
+\\
+$2 \times 17+5\times3=2\times v_1+5 \times v_2 \Leftrightarrow v_1=\frac{49-5v_2}{2}\\$
+e\\
+$2 \times 17^2+5\times 3^2=2 \times v_1^2+5 \times v_2^2 \Leftrightarrow 623=(\frac{49-5v_2}{2})^2+5v_2^2 \\
+\\
+\Leftrightarrow 35v^2_ 2+490v_ 2+1155=0\\
+\\
+\Rightarrow v_ 2=\frac{490\pm 280}{70}=3 \vee \boxed{11} \Rightarrow v_1=17 \vee \boxed{-3}$
+
+
+
+\end{document}
